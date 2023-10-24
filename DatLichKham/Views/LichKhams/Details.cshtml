@@ -1,0 +1,74 @@
+﻿@model DatLichKham.Models.LichKham
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>LichKham</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.BacSi.BacSi_Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BacSi.BacSi_Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PhongKham.PhongKham_Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PhongKham.PhongKham_Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BenhNhan_Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BenhNhan_Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BenhNhan_Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BenhNhan_Email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NgayKham)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NgayKham)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ThoiGianKham)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ThoiGianKham)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TrangThai)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TrangThai)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.LichKham_ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

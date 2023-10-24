@@ -1,0 +1,42 @@
+﻿@model DatLichKham.Models.PhongKham
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>PhongKham</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.PhongKham_Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PhongKham_Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SoLuongToiDa)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SoLuongToiDa)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SoLuongHienTai)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SoLuongHienTai)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.PhongKham_ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

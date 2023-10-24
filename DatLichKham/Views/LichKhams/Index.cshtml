@@ -1,0 +1,70 @@
+﻿@model IEnumerable<DatLichKham.Models.LichKham>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.BacSi.BacSi_Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PhongKham.PhongKham_Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BenhNhan_Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BenhNhan_Email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NgayKham)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ThoiGianKham)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TrangThai)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.BacSi.BacSi_Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PhongKham.PhongKham_Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BenhNhan_Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BenhNhan_Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NgayKham)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ThoiGianKham)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TrangThai)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.LichKham_ID }) |
+                @Html.ActionLink("Details", "Details", new { id = item.LichKham_ID }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.LichKham_ID })
+            </td>
+        </tr>
+    }
+
+</table>
+@*@foreach (var item in ViewBag.SLuong)
+    {
+        <p>@item</p>
+    }*@
